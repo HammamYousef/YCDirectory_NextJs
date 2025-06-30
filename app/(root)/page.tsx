@@ -1,23 +1,13 @@
 import SearchForm from "@/components/SearchForm";
-import StartupCard from "@/components/StartupCard";
-
-const posts = [{
-  _id: "1",
-  title: "Innovative Tech Startup",
-  description: "A startup that revolutionizes technology.",
-  image: "/images/startup1.jpg",
-  _createdAt: "2023-10-01T12:00:00Z",
-  views: 150,
-  author: {
-    _id: "author1",
-    name: "John Doe",
-    image: "/images/author1.jpg",
-  },
-  category: "Technology",
-}]
+import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
+import { sanityFetch } from "@/sanity/lib/live";
+import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ query?: string }> }) {
   const query = (await searchParams).query;
+
+  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY });
+
   return (
     <>
     <section className="pink_container">
