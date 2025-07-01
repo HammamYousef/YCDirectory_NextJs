@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 YC Directory – Startup CMS Platform
 
-## Getting Started
+YC Directory is a modern CMS-powered platform where users can **create, showcase, and manage startups** in a streamlined, elegant directory. Built with **Next.js** and **Sanity CMS**, it allows authenticated users to contribute high-quality startup listings, powered by GitHub OAuth and flexible content management.
 
-First, run the development server:
+![YC Directory Screenshot](public/preview.png)
+
+## ✨ Features
+
+- 🔐 GitHub Authentication via NextAuth
+- 🏗️ Sanity CMS integration for real-time content management
+- 🌐 Public and private access to startup posts
+- 🖼️ Optimized image handling
+- ⚡ Fast, responsive UI powered by Next.js and TailwindCSS
+- 🛡️ Sentry integrated for error tracking
+
+## 📦 Tech Stack
+
+| Tech        | Purpose                        |
+|-------------|--------------------------------|
+| **Next.js** | Framework                      |
+| **Sanity**  | Headless CMS                   |
+| **NextAuth**| Authentication (GitHub OAuth)  |
+| **TailwindCSS** | Styling                   |
+| **Sentry**  | Error tracking                 |
+
+---
+
+## 🧪 Environment Variables
+
+Before running the project, create a `.env.local` file in the root and add the following variables:
+
+```
+AUTH_SECRET=
+
+AUTH_GITHUB_ID=
+AUTH_GITHUB_SECRET=
+
+NEXT_PUBLIC_SANITY_PROJECT_ID=
+NEXT_PUBLIC_SANITY_DATASET=
+SANITY_WRITE_API=
+
+SENTRY_AUTH_TOKEN=
+```
+
+> 🔒 Make sure you **never commit** your `.env.local` file to GitHub.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/HammamYousef/YCDirectory_NextJs.git
+cd YCDirectory_NextJs
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Dev Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be running on [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Folder Structure
 
-## Learn More
+```
+├── app/                  # Next.js app directory
+├── components/           # Reusable UI components
+├── lib/                  # Utility functions and Sanity client
+├── sanity/               # CMS schemas and config
+├── public/               # Static assets
+├── styles/               # Global styles
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Add user dashboards to manage startups
+- Tag filtering and search capabilities
+- Startup upvote system
+- Comment and discussion threads
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Hammam Yousef**  
+Frontend Developer  
+[LinkedIn](https://www.linkedin.com/in/hammamyousef) · [GitHub](https://github.com/HammamYousef)
+
+---
+
+> 💡 _Built with passion to empower founders._
