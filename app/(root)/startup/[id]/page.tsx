@@ -9,6 +9,10 @@ import { Skeleton } from '@/components/ui/skeleton';
 import markdownit from "markdown-it";
 import View from '@/components/View';
 
+const md = markdownit();
+
+export const experimental_ppr = true;
+
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
  
@@ -16,7 +20,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   
   if (!post) return notFound();
   
-  const md = markdownit();
   const parsedContent = md.render(post?.pitch || "");
 
   return (
