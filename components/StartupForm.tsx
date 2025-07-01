@@ -26,10 +26,7 @@ const StartupForm = () => {
         category: formData.get("category") as string,
         link: formData.get("link") as string,
         pitch,
-      };
-
-      console.log("Form Values:", formValues);
-      
+      };      
 
       await formSchema.parseAsync(formValues);
 
@@ -141,7 +138,7 @@ const StartupForm = () => {
 
         <MDEditor
           value={pitch}
-          onChange={(value) => setPitch(value as string)}
+          onChange={(value) => setPitch(value ?? "")}
           id="pitch"
           preview="edit"
           height={300}

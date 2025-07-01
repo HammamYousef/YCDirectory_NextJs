@@ -32,7 +32,7 @@ export const createPitch = async (
       category,
       image: link,
       slug: {
-        _type: slug,
+        _type: "slug",
         current: slug,
       },
       author: {
@@ -40,6 +40,7 @@ export const createPitch = async (
         _ref: session?.id,
       },
       pitch,
+      views: 1
     };
 
     const result = await writeClient.create({ _type: "startup", ...startup });
